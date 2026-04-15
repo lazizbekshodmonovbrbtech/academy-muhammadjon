@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+html,
+body {
+  overflow-x: clip;
+}
+
+body {
+  font-family: Inter, "SF Pro Display", "Segoe UI", sans-serif;
+}
+
+.glass {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.86) 0%,
+    rgba(255, 245, 237, 0.66) 100%
+  );
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  box-shadow: 0 20px 40px -25px rgba(27, 16, 7, 0.35);
+  backdrop-filter: blur(14px);
+}
+
+.headline-gradient {
+  background: linear-gradient(115deg, #ff5b2e 0%, #ff7b56 50%, #ff9f80 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.noise::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(rgba(255, 255, 255, 0.26) 0.5px, transparent 0.5px);
+  background-size: 4px 4px;
+  opacity: 0.22;
+  pointer-events: none;
+}
